@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/parshipFragment">
 
+    <fragment
+        android:id="@+id/parshipFragment"
+        android:name="com.example.parshipbrands.ParshipFragment"
+        android:label="ParshipFragment" >
+        <action
+            android:id="@+id/action_parshipFragment_to_elitepartnerFragment"
+            app:destination="@id/elitepartnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/elitepartnerFragment"
+        android:name="com.example.parshipbrands.ElitepartnerFragment"
+        android:label="ElitepartnerFragment" >
+        <action
+            android:id="@+id/action_elitepartnerFragment_to_parshipFragment"
+            app:destination="@id/parshipFragment" />
+    </fragment>
 </navigation>

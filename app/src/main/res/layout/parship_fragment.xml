@@ -16,14 +16,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="250dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginBottom="270dp"
             android:text="Parship"
             android:textColor="#FF0000"
             android:textSize="50sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/toggleButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/toggleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="#ECECEC"
+            android:fontFamily="sans-serif-black"
+            android:text="Toggle"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:rippleColor="#ECECEC" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
