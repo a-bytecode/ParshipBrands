@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.ParshipBrands" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#003D98</item>
-        <item name="colorPrimaryVariant">#003DA5</item>
+        <item name="colorPrimary">#176CCD</item>
+        <item name="colorPrimaryVariant">#176CCD</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
