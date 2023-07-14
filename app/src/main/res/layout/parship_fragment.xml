@@ -22,12 +22,12 @@
             android:textColor="#FF0000"
             android:textSize="50sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/toggleButton"
+            app:layout_constraintBottom_toTopOf="@+id/toggleButtonParship"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/toggleButton"
+            android:id="@+id/toggleButtonParship"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
