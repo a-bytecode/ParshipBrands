@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.parshipbrands.databinding.ElitepartnerFragmentBinding
 
 class ElitepartnerFragment : Fragment() {
@@ -25,6 +26,9 @@ class ElitepartnerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding.toggleButtonElite.setOnClickListener {
+            findNavController().navigate(ElitepartnerFragmentDirections.actionElitepartnerFragmentToParshipFragment())
+        }
 
     }
 }
