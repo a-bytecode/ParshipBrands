@@ -1,6 +1,8 @@
 package com.example.parshipbrands
 
+import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,8 +28,21 @@ class ParshipFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        var needBoolean = false
+
         binding.toggleButtonParship.setOnClickListener {
-            findNavController().navigate(ParshipFragmentDirections.actionParshipFragmentToElitepartnerFragment())
+
+            if (!needBoolean) {
+                needBoolean = true
+                binding.parshipTV.text = "Elitepartner"
+                binding.parshipTV.setTextColor(Color.BLUE)
+
+            } else {
+                Log.d("BOOLEAN","$needBoolean")
+                needBoolean = false
+                binding.parshipTV.text = "Parship"
+                binding.parshipTV.setTextColor(Color.RED)
+            }
         }
     }
 }

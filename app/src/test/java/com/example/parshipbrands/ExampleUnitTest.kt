@@ -9,9 +9,18 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
-    @Test
+class ExampleUnitTest { // Hier werden die Klassen die getestet werden eingetragen,
+    @Test // Damit ruft man den Test auf.
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        assertEquals(4, 1 + 2) // Hier kommen die Funktionen zum Vergleichen mit
     }
+    @Test
+    fun addition_isCorrect1() {
+        assertEquals(4, 1 + 2) // Hier kommen die Funktionen zum Vergleichen mit
+    }
+    @Test
+    fun addition_isCorrect2() {
+        assertEquals(4, 1 + 2) // Hier kommen die Funktionen zum Vergleichen mit
+    }
+
 }
