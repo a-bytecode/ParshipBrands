@@ -11,7 +11,7 @@ import com.example.parshipbrands.databinding.ParshipFragmentBinding
 
 class ParshipFragment : Fragment() {
 
-    private lateinit var binding : ParshipFragmentBinding // Binding erstellt für das Binding zum parship_fragment.xml
+    private lateinit var binding : ParshipFragmentBinding
 
     private var needBoolean = false
 
@@ -43,20 +43,25 @@ class ParshipFragment : Fragment() {
         }
     }
 
+    /*
+    * Diese Funktionen wurden für die Unit-Tests geschrieben.
+    * Durch diese Funktionen werden die jeweiligen Elemente & Zustände in der Test-Klasse überprüft.
+    */
+//* * * * ============================= * * * ================================ * * * *//
     fun performToggleClick() {
-        binding.toggleButtonParship.performClick()
+        binding.toggleButtonParship.performClick() // <- Überprüfung von der Toggle Funktion.
     }
 
-    fun getNeedBoolean() : Boolean {
+    fun getNeedBoolean() : Boolean { // <- Überprüfung des Boolean Wertes
         return needBoolean
     }
 
     fun getParshipText(): String {
-        return binding.parshipTV.text.toString()
+        return binding.parshipTV.text.toString() // <- Überprüfung des Zustandes von der TextView
     }
 
     fun getParshipTextColor(): Int {
-        return binding.parshipTV.currentTextColor
+        return binding.parshipTV.currentTextColor // <- Überprüfung des Zustandes des TextColors
     }
-
+//* * * * ============================ * * * ================================= * * * *//
 }
