@@ -49,4 +49,11 @@ dependencies {
     //Navigation
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
+    //Testing
+    testImplementation 'org.robolectric:robolectric:4.6.1'
+    testImplementation 'androidx.test:core:1.5.0'
+    testImplementation 'androidx.test:runner:1.4.0'
+    testImplementation 'androidx.test:rules:1.4.0'
+    testImplementation 'androidx.fragment:fragment-testing:1.4.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
 }

@@ -14,6 +14,7 @@ class ParshipFragment : Fragment() {
 
     private lateinit var binding : ParshipFragmentBinding // Binding erstellt für das Binding zum parship_fragment.xml
 
+    private var needBoolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,12 +24,10 @@ class ParshipFragment : Fragment() {
         binding = ParshipFragmentBinding.inflate(inflater)
 
         return binding.root
+
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        var needBoolean = false
 
         binding.toggleButtonParship.setOnClickListener {
 
@@ -38,11 +37,28 @@ class ParshipFragment : Fragment() {
                 binding.parshipTV.setTextColor(Color.BLUE)
 
             } else {
-                Log.d("BOOLEAN","$needBoolean")
                 needBoolean = false
                 binding.parshipTV.text = "Parship"
                 binding.parshipTV.setTextColor(Color.RED)
             }
         }
     }
+
+
+    fun performToggleClick() {
+        binding.toggleButtonParship.performClick()
+    }
+
+    fun getNeedBoolean() : Boolean {
+        return needBoolean
+    }
+
+    fun getParshipText(): String {
+        return binding.parshipTV.text.toString()
+    }
+
+    fun getParshipTextColor(): Int {
+        return binding.parshipTV.currentTextColor
+    }
+
 }
