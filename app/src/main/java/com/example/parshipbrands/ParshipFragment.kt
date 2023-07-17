@@ -49,7 +49,7 @@ class ParshipFragment : Fragment() {
     */
 //* * * * ============================= * * * ================================ * * * *//
     fun performToggleClick() {
-        binding.toggleButtonParship.performClick() // <- Überprüfung von der Toggle Funktion.
+        binding.toggleButtonParship.performClick() // <- Überprüfung des Buttons, der Toggle Funktion.
     }
 
     fun getNeedBoolean() : Boolean { // <- Überprüfung des Boolean Wertes
@@ -57,7 +57,7 @@ class ParshipFragment : Fragment() {
     }
 
     fun getParshipText(): String {
-        return binding.parshipTV.text.toString() // <- Überprüfung des Zustandes von der TextView
+        return binding.parshipTV.text.toString() // <- Überprüfung des Zustandes der TextView
     }
 
     fun getParshipTextColor(): Int {

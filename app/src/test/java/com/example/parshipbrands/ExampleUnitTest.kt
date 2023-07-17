@@ -2,6 +2,7 @@ package com.example.parshipbrands
 import android.graphics.Color
 import android.os.Build.VERSION_CODES.Q
 import androidx.fragment.app.testing.FragmentScenario
+import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Test
 import org.junit.Assert.*
@@ -23,11 +24,14 @@ import org.robolectric.annotation.Config
 class ParshipFragmentTest { // Hier wird eine Klasse erstellt in der sich alle Testing Tasks befinden.
     /*
     * Hier initialisieren wir das ParshipFragment damit wir auf die erforderlichen
-    * Funktionen innerhalb des Fragmentes zugreifen können.
+    * Funktionen ausserhalb des Fragmentes zugreifen können.
+    * Durch die scenario können wir auf die Funktionen von FragmentScenario zugreifen.
     */
-    private var fragment = ParshipFragment()
-    private var scenario: FragmentScenario<ParshipFragment> = FragmentScenario.launchInContainer(fragment::class.java) as FragmentScenario<ParshipFragment>
-
+    private var scenario: FragmentScenario<ParshipFragment> = launchFragmentInContainer()
+    /*
+    * Hier wird die @Test Funktion ausgeführt, sie greift auf das Fragment zu und die Elemente & Zustände
+    * werden durch die assertEquals Funktion mit einander verglichen.
+    */
     @Test
     fun toggleButtonParship_Clicked_TextAndColorChanged() {
         scenario.onFragment { fragment ->
