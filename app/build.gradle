@@ -74,7 +74,7 @@ dependencies {
     testImplementation 'androidx.test:runner:1.5.2'
     testImplementation 'androidx.test:rules:1.5.0'
     testImplementation 'androidx.fragment:fragment-testing:1.6.0'
-    //Debug Implementation
+    //Debug Implementation (Definiert eine Abhängigkeit zu der Bibliothek Fragment-Testing)
     debugImplementation("androidx.fragment:fragment-testing:1.6.0")
     // JUnit 4 Framework (Überprüft Klassen & Methoden)
     testImplementation 'junit:junit:4.13.2'

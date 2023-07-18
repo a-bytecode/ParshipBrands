@@ -25,7 +25,7 @@ class ParshipFragmentTest { // Hier wird eine Klasse erstellt in der sich alle T
     /*
     * Hier initialisieren wir das ParshipFragment damit wir auf die erforderlichen
     * Funktionen ausserhalb des Fragmentes zugreifen können.
-    * Durch die scenario können wir auf die Funktionen von FragmentScenario zugreifen.
+    * Durch die scenario Variable können wir auf die Funktionen von FragmentScenario zugreifen.
     */
     private var scenario: FragmentScenario<ParshipFragment> = launchFragmentInContainer()
     /*
