@@ -1,17 +1,19 @@
 package com.example.parshipbrands
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.parshipbrands.databinding.ParshipFragmentBinding
+import com.example.parshipbrands.model.MainViewModel
 
 
 class ParshipFragment : Fragment() {
 
     private lateinit var binding : ParshipFragmentBinding
+    private val viewModel: MainViewModel by activityViewModels()
 
     private var needBoolean = false
 
@@ -30,17 +32,10 @@ class ParshipFragment : Fragment() {
 
         binding.toggleButtonParship.setOnClickListener {
 
-            if (!needBoolean) {
-                needBoolean = true
-                binding.parshipTV.text = "Elitepartner"
-                binding.parshipTV.setTextColor(Color.BLUE)
+            viewModel.mainFunc(binding.parshipTV)
 
-            } else {
-                needBoolean = false
-                binding.parshipTV.text = "Parship"
-                binding.parshipTV.setTextColor(Color.RED)
-            }
         }
+
     }
 
     /*
