@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
 
-    var needBoolean = false
+    var needBoolean = false // Boolean Wert der für das Parshipfragment erreichbar sein soll.
 
+    // * Funktion für das Parshipfragment bereitegstellt * //
+//* * * * ============================= * * * ================================ * * * *//
     fun mainFunc(textView: TextView) {
 
         if (!needBoolean) {
@@ -23,5 +25,6 @@ class MainViewModel : ViewModel() {
         }
 
     }
+//* * * * ============================= * * * ================================ * * * *//
 
 }
