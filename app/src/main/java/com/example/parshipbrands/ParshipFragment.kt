@@ -1,6 +1,7 @@
 package com.example.parshipbrands
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +16,6 @@ class ParshipFragment : Fragment() {
     private lateinit var binding : ParshipFragmentBinding
     private val viewModel: MainViewModel by activityViewModels()
 
-    private var needBoolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,7 +35,6 @@ class ParshipFragment : Fragment() {
             viewModel.mainFunc(binding.parshipTV)
 
         }
-
     }
 
     /*
@@ -48,7 +47,7 @@ class ParshipFragment : Fragment() {
     }
 
     fun getNeedBoolean() : Boolean { // <- Überprüfung des Boolean Wertes
-        return needBoolean
+        return viewModel.needBoolean
     }
 
     fun getParshipText(): String {

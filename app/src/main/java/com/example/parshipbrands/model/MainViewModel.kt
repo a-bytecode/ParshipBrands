@@ -6,21 +6,22 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
 
-    var myBoolean = false
+    var needBoolean = false
 
     fun mainFunc(textView: TextView) {
 
-        if (!myBoolean) {
-
-            myBoolean = true
+        if (!needBoolean) {
+            needBoolean = true
             textView.text = "Elitepartner"
             textView.setTextColor(Color.BLUE)
 
         } else {
-            myBoolean = false
+            needBoolean = false
             textView.text = "Parship"
             textView.setTextColor(Color.RED)
+
         }
+
     }
 
 }
